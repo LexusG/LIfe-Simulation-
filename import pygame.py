@@ -12,4 +12,16 @@ WIDTH, HEIGHT = 800, 800
 TILE_SIZE = 20 
 GRID_WIDTH = WIDTH // TILE_SIZE
 GRID_HEIGHT = HEIGHT // TILE_SIZE
-FPS = 60  ghf
+FPS = 60  
+
+#Window of the game
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+clock = pygame.time.Clock()
+
+def main():
+    running = True
+
+    while running:
+        clock.tick(FPS)
+        
