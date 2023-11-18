@@ -39,7 +39,7 @@ def main():
                 running = False
         
         # Quitting Pygame when the game loop ends
-        pygame.quit()
+    pygame.quit()
 
 if __name__=="__main__":
     main()       
