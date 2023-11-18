@@ -31,7 +31,7 @@ def main():
     while running:
         # Limiting the loop to a maximum of FPS times per second
         clock.tick(FPS)
-        
+         
         # Event handling loop
         for event in pygame.event.get(): 
             # Checking for the QUIT event to exit the game
@@ -41,4 +41,5 @@ def main():
         # Quitting Pygame when the game loop ends
         pygame.quit()
 
-        
+if __name__=="__main__":
+    main()       
