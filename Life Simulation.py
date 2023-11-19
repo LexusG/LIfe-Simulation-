@@ -21,11 +21,21 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 # Setting up a clock for FPS control
 clock = pygame.time.Clock()
 
+def draw_grid(positions):
+    # Drawing horizontal lines for the grid
+    for row in range (GRID_HEIGHT):
+        pygame.draw.line(screen, BLACK, (0, row * TILE_SIZE), (WIDTH, row * TILE_SIZE))
+    
+    # Drawing vertical lines for the grid
+    for column in range (GRID_WIDTH):
+        pygame.draw.line(screen, BLACK, (column * TILE_SIZE, 0), (column * TILE_SIZE, HEIGHT))    
+
 
 # Main function containing the game loop
 def main():
     running = True
-  
+    
+    positions = set()  # Set to store positions 
   
     # Game loop: runs as long as the game is running
     while running:
@@ -37,6 +47,10 @@ def main():
             # Checking for the QUIT event to exit the game
             if event.type == pygame.QUIT:
                 running = False
+        
+        screen.fill(GREY)        # Filling the screen with grey background
+        draw_grid(positions)     # Drawing the grid
+        pygame.display.update()  # Updating the display after drawing
         
         # Quitting Pygame when the game loop ends
     pygame.quit()
