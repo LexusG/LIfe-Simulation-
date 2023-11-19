@@ -21,6 +21,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 # Setting up a clock for FPS control
 clock = pygame.time.Clock()
 
+# Function to draw the grid on the screen
 def draw_grid(positions):
     # Drawing horizontal lines for the grid
     for row in range (GRID_HEIGHT):
