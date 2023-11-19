@@ -29,3 +29,7 @@ random.randrange(): Generates a random number within a specified range. It's use
 
 **Key Function in my Project:**
 Bundling the Game: PyInstaller was used to convert my Conway's Game of Life Python script into an .exe file. This allows users to run the game as a standalone application without needing to install Python or any dependencies. The executable file can also be downloaded from the repo.
+
+
+
+
